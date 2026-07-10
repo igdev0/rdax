@@ -15,6 +15,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  serverExternalPackages: ['sharp', '@img/sharp-linux-x64'],
   webpack(webpackConfig) {
     webpackConfig.resolve.extensionAlias = {
       '.cjs': ['.cts', '.cjs'],
