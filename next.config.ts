@@ -8,13 +8,14 @@ const dirname = path.dirname(__filename)
 
 const nextConfig: NextConfig = {
   images: {
+    remotePatterns: [],
     localPatterns: [
       {
         pathname: '/api/media/file/**',
       },
     ],
   },
-  webpack: (webpackConfig) => {
+  webpack(webpackConfig) {
     webpackConfig.resolve.extensionAlias = {
       '.cjs': ['.cts', '.cjs'],
       '.js': ['.ts', '.tsx', '.js', '.jsx'],
